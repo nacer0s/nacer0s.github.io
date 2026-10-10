@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>نصر الدين براس — مطوّر ومصمّم</title>
+  <meta name="description" content="معرض أعمال نصر الدين براس، مطوّر ومصمّم من الدار البيضاء. أعمال مختارة، تعريف، تواصل." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/835a2ccfff.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css?v=11" />
+  <link rel="icon" type="image/png" href="../img/favicon.png" />
+  <link rel="apple-touch-icon" href="../img/favicon.png" />
+</head>
+<body>
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <p class="mono loader-k">N—B / PORTFOLIO</p>
+      <p class="loader-num mono"><span id="loaderNum">000</span></p>
+      <div class="loader-bar"><span id="loaderBar"></span></div>
+    </div>
+  </div>
+
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#top" class="logo" aria-label="نصر الدين براس — الرئيسية">
+        <span class="logo-mark">ن—ب</span>
+        <span class="logo-sub mono">CASABLANCA /26</span>
+      </a>
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <a href="#about" class="nav-link"><span class="nav-num mono">٠١</span>من أنا</a>
+        <a href="#work" class="nav-link"><span class="nav-num mono">٠٢</span>أعمالي</a>
+        <a href="#certs" class="nav-link"><span class="nav-num mono">٠٣</span>الشهادات</a>
+        <a href="#contact" class="nav-link"><span class="nav-num mono">٠٤</span>اتصل بي</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch mono" role="group" aria-label="اللغة">
+          <a href="../en/" class="lang-btn">EN</a>
+          <a href="../fr/" class="lang-btn">FR</a>
+          <a href="../ar/" class="lang-btn is-active" aria-current="true">AR</a>
+        </div>
+        <button id="themeToggle" class="icon-btn" aria-label="التبديل إلى الوضع الفاتح" aria-pressed="true"><i class="fa-solid fa-sun icon"></i></button>
+        <button id="menuToggle" class="icon-btn menu-btn" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobileMenu"><i class="fa-solid fa-bars icon"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <nav aria-label="جوال">
+      <a href="#about"><span class="mono">٠١</span>من أنا</a>
+      <a href="#work"><span class="mono">٠٢</span>أعمالي</a>
+      <a href="#certs"><span class="mono">٠٣</span>الشهادات</a>
+      <a href="#contact"><span class="mono">٠٤</span>اتصل بي</a>
+    </nav>
+    <div class="mobile-meta mono"><span>EN / FR / AR</span><span id="mobileClock">CASA --:--</span></div>
+  </div>
+
+  <aside class="side-rail" aria-hidden="true">
+    <span class="rail-text mono">N. BOURAS — VOL.02</span>
+    <span class="rail-line"></span>
+    <span class="rail-dot"></span>
+  </aside>
+
+  <main id="main">
+    <!-- البطل -->
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <p class="hero-eyebrow mono reveal"><span class="pulse"></span>متاح لمشاريع العمل الحر<span class="hide-sm"> — الدار البيضاء (GMT) / عن بُعد</span></p>
+        <h1 class="hero-title">
+          <span class="line reveal">نصر</span>
+          <span class="line line-2 reveal">الدين<span class="accent-dot">.</span></span>
+          <span class="line line-outline reveal">براس</span>
+        </h1>
+        <div class="hero-meta mono reveal">
+          <span>[ DEV × DESIGN ]</span>
+          <span class="hero-typed" dir="ltr">$ <strong id="typedRole">developer_</strong><span class="caret">▌</span></span>
+          <span class="meta-right">FOLIO — AR</span>
+        </div>
+        <figure class="hero-photo reveal">
+          <img src="../img/me.png" alt="صورة نصر الدين براس" fetchpriority="high" onerror="this.closest('.hero-photo').style.display='none'" />
+          <figcaption class="mono photo-cap"><span>FIG.01</span><span>CASA — GMT</span></figcaption>
+        </figure>
+        <div class="hero-card reveal">
+          <div class="term-head mono"><span class="dots" aria-hidden="true"></span><span dir="ltr">nb@casa: ~</span><span class="term-live"><span class="pulse"></span>مباشر</span></div>
+          <div class="hero-card-body">
+            <div class="hero-card-main">
+              <p class="hero-role">مطوّر <em>&amp;</em> مصمّم</p>
+              <p class="hero-desc">مصمّم ومونتير فيديو في OpportuNet® · مؤسس KumoCoders — تصميم وكود وموشن.</p>
+              <div class="hero-ctas">
+                <a href="#work" class="btn btn-solid magnetic">شاهد الأعمال<i class="fa-solid fa-arrow-down-left icon"></i></a>
+                <a href="#contact" class="btn btn-ghost magnetic">تواصل معي</a>
+                <a href="../cv/Nacer CV.pdf" download class="btn btn-ghost btn-small magnetic"><i class="fa-solid fa-download icon"></i>تحميل السيرة</a>
+              </div>
+            </div>
+            <dl class="hero-specs mono">
+              <div><dt>المقر</dt><dd>الدار البيضاء، المغرب</dd></div>
+              <div><dt>التوقيت</dt><dd id="localTime">--:--</dd></div>
+              <div><dt>الحالة</dt><dd class="status">● متاح</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="hero-badge reveal" aria-hidden="true"><span class="badge-inner mono">متاح<br />للعمل<br />الحر<br />●</span></div>
+      </div>
+      <div class="hero-stats reveal">
+        <div><strong>06+</strong><span class="mono">سنوات</span></div>
+        <div><strong>11+</strong><span class="mono">شهادة</span></div>
+        <div><strong>03</strong><span class="mono">لغات</span></div>
+        <div><strong class="accent">100%</strong><span class="mono">Vanilla</span></div>
+      </div>
+      <div class="hero-foot mono"><span>HTML — CSS — JS</span><span>مرّر ↓</span></div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track mono">
+        <span>مطوّر ✕ مصمّم — الدار البيضاء — VANILLA فقط — داكن / فاتح — EN · FR · AR —&nbsp;</span>
+        <span>مطوّر ✕ مصمّم — الدار البيضاء — VANILLA فقط — داكن / فاتح — EN · FR · AR —&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- من أنا -->
+    <section class="section" id="about">
+      <div class="section-grid">
+        <div class="section-label">
+          <div class="label-sticky">
+            <span class="mono label-num">٠١</span>
+            <h2 class="label-title">من أنا</h2>
+            <span class="label-rule"></span>
+            <div class="toc mono"><a href="#about-bio">— تعريف</a><a href="#about-stack">— المهارات</a><a href="#about-path">— المسار</a></div>
+          </div>
+        </div>
+        <div class="section-body">
+          <p class="lede reveal">أصمّم واجهات <strong>هادئة</strong> باهتمام <span class="hl">صاخب</span> بالتفاصيل.</p>
+          <div class="about-cols" id="about-bio">
+            <div class="reveal">
+              <p>أعمل حاليًا مصمّمًا ومونتير فيديو في OpportuNet® ومؤسسًا لـKumoCoders، أجمع بين التصميم والتطوير لصناعة تجارب بصرية ورقمية جذابة. يدعم مساري شهادات عملية في GitHub وتأسيس متين في Figma وتطوير الويب.</p>
+              <p>أتابع دراستي الثانوية في الثانوية التأهيلية الشهيد إدريس لحريزي — التخرج المتوقع يونيو 2027 — وأصقل مهاراتي بالتعاون والتعلم المستمر، مساهمًا في مشاريع تربط الإبداع بالتقنية.</p>
+              <ul class="check-list">
+                <li><i class="fa-solid fa-check icon"></i>مؤسس — KumoCoders</li>
+                <li><i class="fa-solid fa-check icon"></i>مصمّم ومونتير فيديو — OpportuNet®</li>
+                <li><i class="fa-solid fa-check icon"></i>المرتبة الثانية — المسابقة الوطنية في Python</li>
+              </ul>
+            </div>
+            <div class="code-card reveal">
+              <div class="code-head mono"><span class="dots" aria-hidden="true"></span><span dir="ltr">bio.config.js</span></div>
+<pre class="mono" dir="ltr"><code>const nacer = {
+  base: "Casablanca, MA",
+  role: ["designer", "developer", "video editor"],
+  stack: ["figma", "html", "css", "js"],
+  frameworks: 0,
+  hireable: () =&gt; true
+};</code></pre>
+            </div>
+          </div>
+          <div class="skills reveal" id="about-stack">
+            <div class="skill"><div class="skill-top mono"><span>تصميم — Adobe CC / Figma</span><span dir="ltr">94%</span></div><div class="skill-track"><span class="skill-fill" data-w="94%"></span></div></div>
+            <div class="skill"><div class="skill-top mono"><span>فرونت إند — HTML / CSS / JS / TS</span><span dir="ltr">92%</span></div><div class="skill-track"><span class="skill-fill" data-w="92%"></span></div></div>
+            <div class="skill"><div class="skill-top mono"><span>باك إند — PHP / MySQL / PostgreSQL</span><span dir="ltr">86%</span></div><div class="skill-track"><span class="skill-fill" data-w="86%"></span></div></div>
+            <div class="skill"><div class="skill-top mono"><span>برمجة وأنظمة — Python / C / ASM / Android</span><span dir="ltr">90%</span></div><div class="skill-track"><span class="skill-fill" data-w="90%"></span></div></div>
+            <div class="skill"><div class="skill-top mono"><span>فيديو وموشن — مونتاج</span><span dir="ltr">85%</span></div><div class="skill-track"><span class="skill-fill" data-w="85%"></span></div></div>
+          </div>
+          <div class="certs reveal">
+            <p class="mono">// التقنيات</p>
+            <div class="card-tags mono">
+              <span>Adobe CC</span>
+              <span>Figma</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JS</span>
+              <span>TS</span>
+              <span>Python</span>
+              <span>C</span>
+              <span>ASM</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>PostgreSQL</span>
+              <span>phpMyAdmin</span>
+              <span>ArtCraft Apps</span>
+              <span>Blender</span>
+              <span>AI Vibe Coding</span>
+              <span>Android</span>
+              <span>Windows</span>
+              <span>Web</span>
+            </div>
+            <p class="mono stack-note">نظام تشغيل قيد البناء — <strong>NaOS</strong> · قريبًا</p>
+          </div>
+          <ol class="timeline reveal" id="about-path">
+            <li><span class="mono t-date">2025 — الآن</span><div><strong>مؤسس، مطوّر ومصمّم — KumoCoders</strong><p>هجين · الدار البيضاء-سطات. قيادة التصميم والتطوير وإطلاق مشاريع ويب متكاملة.</p></div></li>
+            <li><span class="mono t-date">2025 — الآن</span><div><strong>مصمّم ومونتير فيديو — OpportuNet®</strong><p>عن بُعد. أنظمة هوية ومرئيات ومونتاج — منها مشروع Project Phi.</p></div></li>
+            <li><span class="mono t-date">2026</span><div><strong>مصمّم — Tython</strong><p>حضوري · الدار البيضاء. تصميم منتجات بـIllustrator وFigma.</p></div></li>
+            <li><span class="mono t-date">2020 — 2025</span><div><strong>مصمّم غرافيك ومطوّر مستقل</strong><p>حضوري وعن بُعد. CSS وHTML5 وMySQL — أكثر من 5 سنوات مع عملاء.</p></div></li>
+            <li><span class="mono t-date">2024 — 2027</span><div><strong>الثانوية التأهيلية الشهيد إدريس لحريزي</strong><p>جذع مشترك · أولى وثانية باكالوريا. المرتبة الثانية — المسابقة الوطنية في البرمجة 2024–2025.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- الأعمال -->
+    <section class="section" id="work">
+      <div class="section-grid">
+        <div class="section-label">
+          <div class="label-sticky">
+            <span class="mono label-num">٠٢</span>
+            <h2 class="label-title">أعمالي</h2>
+            <span class="label-rule"></span>
+            <div class="filter mono" id="workFilter" role="group" aria-label="تصفية المشاريع">
+              <button class="filter-btn is-active" data-filter="all">الكل</button>
+              <button class="filter-btn" data-filter="apps">تطبيقات</button>
+              <button class="filter-btn" data-filter="web">ويب</button>
+              <button class="filter-btn" data-filter="brand">هوية</button>
+            </div>
+          </div>
+        </div>
+        <div class="section-body">
+          <p class="lede reveal">أعمال مختارة، <strong>2023 ← 2026</strong>.</p>
+          <div class="work-list">
+            <a href="../files/phi-brand-guidelines.pdf" target="_blank" class="work-row reveal" data-cat="brand">
+              <span class="mono row-num">٠١</span>
+              <span class="row-main"><strong>Project Phi — هندسة النمو</strong><span>دليل هوية يوظف النسبة الذهبية في تطوير المسار المهني. Figma + Illustrator، ديسمبر 2025 – يناير 2026 @ OpportuNet®.</span></span>
+              <span class="mono row-tags" dir="ltr">Brand / Figma / Motion</span>
+              <span class="mono row-year" dir="ltr">2026</span>
+              <span class="row-arrow"><i class="fa-solid fa-arrow-left icon"></i></span>
+            </a>
+            <a href="https://github.com/nacer0s/Athar" target="_blank" rel="noopener" class="work-row reveal" data-cat="apps">
+              <span class="mono row-num">٠٢</span>
+              <span class="row-main"><strong>أثر — تطبيق أندرويد</strong><span>تطبيق أندرويد مجاني ومفتوح المصدر مع دعم كامل للعربية. إصدار مستقر.</span></span>
+              <span class="mono row-tags" dir="ltr">Android / Arabic / OSS</span>
+              <span class="mono row-year" dir="ltr">2026</span>
+              <span class="row-arrow"><i class="fa-solid fa-arrow-up-left icon"></i></span>
+            </a>
+            <a href="https://nacer0s.github.io/AtomTask" target="_blank" rel="noopener" class="work-row reveal" data-cat="apps">
+              <span class="mono row-num">٠٣</span>
+              <span class="row-main"><strong>AtomTask — تطبيق أندرويد بالذكاء الاصطناعي</strong><span>تطبيق أندرويد يعتمد على الذكاء الاصطناعي مع باقة مجانية دائمة ودعم العربية. تجربة حية ومفتوح المصدر.</span></span>
+              <span class="mono row-tags" dir="ltr">Android / AI / OSS</span>
+              <span class="mono row-year" dir="ltr">2026</span>
+              <span class="row-arrow"><i class="fa-solid fa-arrow-up-left icon"></i></span>
+            </a>
+            <a href="https://sardab.gt.tc" target="_blank" rel="noopener" class="work-row reveal" data-cat="web">
+              <span class="mono row-num">٠٤</span>
+              <span class="row-main"><strong>سرداب — تواصل مشفّر P2P</strong><span>مراسلة ومكالمات واجتماعات مشفرة بالكامل بين المتصفحات مباشرة، بدون حسابات.</span></span>
+              <span class="mono row-tags" dir="ltr">WebRTC / Privacy / OSS</span>
+              <span class="mono row-year" dir="ltr">2026</span>
+              <span class="row-arrow"><i class="fa-solid fa-arrow-up-left icon"></i></span>
+            </a>
+          </div>
+          <div class="gallery reveal" id="gallery">
+            <p class="mono">// مختارات بصرية</p>
+            <div class="gallery-grid">
+              <figure class="g-item"><img src="../img/gallery-1.webp" alt="Athar — شعار التطبيق" loading="lazy" /></figure>
+              <figure class="g-item"><img src="../img/gallery-2.webp" alt="Athar — شاشة 1" loading="lazy" /></figure>
+              <figure class="g-item"><img src="../img/gallery-3.webp" alt="Athar — شاشة 2" loading="lazy" /></figure>
+              <figure class="g-item"><img src="../img/gallery-4.webp" alt="AtomTask — شعار التطبيق" loading="lazy" /></figure>
+              <figure class="g-item"><img src="../img/gallery-5.webp" alt="AtomTask — شاشة 1" loading="lazy" /></figure>
+              <figure class="g-item"><img src="../img/gallery-6.webp" alt="AtomTask — شاشة 2" loading="lazy" /></figure>
+              <figure class="g-item"><img src="../img/gallery-7.webp" alt="Sardab — شعار المنصة" loading="lazy" /></figure>
+              <figure class="g-item"><img src="../img/gallery-8.webp" alt="Sardab — شاشة 1" loading="lazy" /></figure>
+              <figure class="g-item"><img src="../img/gallery-9.webp" alt="Sardab — شاشة 2" loading="lazy" /></figure>
+              <figure class="g-item"><img src="../img/phi-logo.png" alt="Project Phi — شعار الهوية" loading="lazy" /></figure>
+            </div>
+          </div>
+          <p class="mono list-note reveal">المزيد مفتوح المصدر — <a href="https://github.com/nacer0s" target="_blank" rel="noopener" dir="ltr">@nacer0s ←</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- المنهجية -->
+    <!-- الشهادات -->
+    <section class="section" id="certs">
+      <div class="section-grid">
+        <div class="section-label">
+          <div class="label-sticky">
+            <span class="mono label-num">٠٣</span>
+            <h2 class="label-title">شهادات</h2>
+            <span class="label-rule"></span>
+            <p class="mono label-note">إثباتات العمل والدراسة.</p>
+          </div>
+        </div>
+        <div class="section-body">
+          <p class="lede reveal">اعتمادات وشهادات، <strong>2025 ← 2026</strong>.</p>
+          <ul class="cert-list reveal">
+            <li><div><strong>Career Essentials in GitHub — Professional Certificate</strong><span class="mono c-sub" dir="ltr">GitHub · GitHub, Web Dev</span></div><span class="mono cert-year" dir="ltr">2025</span></li>
+            <li><div><strong>Practical GitHub Copilot</strong><span class="mono c-sub" dir="ltr">LinkedIn · Web Dev, Copilot</span></div><span class="mono cert-year" dir="ltr">2025</span></li>
+            <li><div><strong>Practical GitHub Project Management &amp; Collaboration</strong><span class="mono c-sub" dir="ltr">LinkedIn · GitHub, Collab</span></div><span class="mono cert-year" dir="ltr">2025</span></li>
+            <li><div><strong>Practical GitHub Actions</strong><span class="mono c-sub" dir="ltr">LinkedIn · GitHub, Web Dev</span></div><span class="mono cert-year" dir="ltr">2025</span></li>
+            <li><div><strong>HTML Essentials</strong><span class="mono c-sub" dir="ltr">Cisco Networking Academy · HTML</span></div><span class="mono cert-year" dir="ltr">2025</span></li>
+            <li><div><strong>Microsoft Azure Essentials</strong><span class="mono c-sub" dir="ltr">LinkedIn · Azure</span></div><span class="mono cert-year" dir="ltr">2026</span></li>
+            <li><div><strong>شهادة تقدير</strong><span class="mono c-sub">KumoCoders</span></div><span class="mono cert-year" dir="ltr">2025</span></li>
+            <li><div><strong>شهادة مطوّر ويب متكامل</strong><span class="mono c-sub">KumoCoders · تطوير الويب</span></div><span class="mono cert-year" dir="ltr">—</span></li>
+            <li><div><strong>Machine Learning</strong><span class="mono c-sub">Orange · أغسطس 2025</span></div><span class="mono cert-year" dir="ltr">2025</span></li>
+            <li><div><strong>هاكاثون GPT-5</strong><span class="mono c-sub" dir="ltr">lablab.ai · 2025</span></div><span class="mono cert-year" dir="ltr">2025</span></li>
+            <li><div><strong>هاكاثون N8N الدار البيضاء</strong><span class="mono c-sub">AI Crafters × n8n · أتمتة</span></div><span class="mono cert-year" dir="ltr">2026</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="process-grid reveal">
+        <div><span class="mono p-num">٠١</span><strong>اكتشاف</strong><p class="mono">موجز + أهداف</p></div>
+        <div><span class="mono p-num">٠٢</span><strong>تصميم</strong><p class="mono">الخط والشبكة أولًا</p></div>
+        <div><span class="mono p-num">٠٣</span><strong>بناء</strong><p class="mono">خام بدون حشو</p></div>
+        <div><span class="mono p-num">٠٤</span><strong>إطلاق</strong><p class="mono">اختبار + نشر</p></div>
+      </div>
+    </section>
+
+    <!-- التواصل -->
+    <section class="section" id="contact">
+      <div class="section-grid">
+        <div class="section-label">
+          <div class="label-sticky">
+            <span class="mono label-num">٠٤</span>
+            <h2 class="label-title">تواصل</h2>
+            <span class="label-rule"></span>
+            <p class="mono label-note">الرد خلال ٢٤ ساعة.</p>
+          </div>
+        </div>
+        <div class="section-body">
+          <h2 class="contact-title reveal">لنعمل<br /><span class="ct-line"><span class="outline">معًا</span><a href="mailto:contact@nacer0s.com" class="big-arrow magnetic" aria-label="إرسال بريد"><i class="fa-solid fa-arrow-up-left icon"></i></a></span></h2>
+          <div class="contact-cols">
+            <div class="contact-form reveal">
+              <p class="mono wa-k">// الأسرع</p>
+              <p class="wa-title">تفضل الدردشة؟</p>
+              <a class="btn btn-solid btn-full magnetic" href="https://wa.me/212776496110?text=مرحباً نصر، رأيت معرض أعمالك وأود مناقشة مشروع." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>دردشة واتساب</a>
+              <a class="btn btn-ghost btn-full magnetic" href="mailto:contact@nacer0s.com">عبر البريد</a>
+              <p class="mono form-note">[ البريد يعمل أيضًا — الرد خلال 24 ساعة ]</p>
+            </div>
+            <div class="contact-info reveal">
+              <div class="info-block">
+                <p class="mono info-k">البريد</p>
+                <a href="mailto:contact@nacer0s.com" id="emailLink" dir="ltr">contact@nacer0s.com</a>
+                <a href="mailto:nacer.eddine.dev@gmail.com" dir="ltr">nacer.eddine.dev@gmail.com</a>
+                <button class="mini-btn mono" id="copyEmail"><i class="fa-solid fa-copy icon"></i>نسخ البريد</button>
+                <a class="mini-btn mono" href="../cv/Nacer CV.pdf" download><i class="fa-solid fa-download icon"></i>تحميل السيرة</a>
+              </div>
+              <div class="info-block">
+                <p class="mono info-k">هاتف / واتساب</p>
+                <a href="tel:+212776496110" dir="ltr">+212 776-496110</a>
+                <a href="https://wa.me/212776496110" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>واتساب</a>
+              </div>
+              <div class="info-block">
+                <p class="mono info-k">منصات — @nacer0s</p>
+                <div class="socials">
+                  <a href="https://instagram.com/nacer0s" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://x.com/nacer0s" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://wa.me/212776496110" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                  <a href="https://www.threads.com/@nacer0s" target="_blank" rel="noopener" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+                  <a href="https://dev.to/nacer0s" target="_blank" rel="noopener" aria-label="DEV.TO"><i class="fa-brands fa-dev"></i></a>
+                  <a href="https://www.linkedin.com/in/nacer0s" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="https://hashnode.com/@nacer0s" target="_blank" rel="noopener" aria-label="Hashnode"><i class="fa-brands fa-hashnode"></i></a>
+                  <a href="https://www.hackerrank.com/nacer0s" target="_blank" rel="noopener" aria-label="HackerRank"><i class="fa-brands fa-hackerrank"></i></a>
+                  <a href="https://qabilah.com/profile/nacer0s" target="_blank" rel="noopener" aria-label="Qabilah"><i class="fa-solid fa-users"></i></a>
+                  <a href="https://www.mortakaz.com/@nacer0s" target="_blank" rel="noopener" aria-label="Mortakaz"><i class="fa-solid fa-rocket"></i></a>
+                  <a href="https://github.com/nacer0s" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                  <a href="https://www.snapchat.com/add/nacer0s" target="_blank" rel="noopener" aria-label="Snapchat"><i class="fa-brands fa-snapchat"></i></a>
+                  <a href="https://discord.com/users/1285241643985010796" target="_blank" rel="noopener" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                  <a href="https://www.tiktok.com/@nacer0s" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                  <a href="https://t.me/nacer0s" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                  <a href="https://nacer0s.com" target="_blank" rel="noopener" aria-label="Website"><i class="fa-solid fa-globe"></i></a>
+                </div>
+              </div>
+              <div class="info-block mono avail"><span class="pulse"></span>متاح — عمل حر وعن بُعد</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <div class="viewer" id="viewer" hidden role="dialog" aria-modal="true" aria-label="عارض الصور">
+    <button class="icon-btn viewer-close" id="viewerClose" aria-label="إغلاق"><i class="fa-solid fa-xmark icon"></i></button>
+    <button class="icon-btn viewer-prev" id="viewerPrev" aria-label="الصورة السابقة"><i class="fa-solid fa-arrow-right icon"></i></button>
+    <figure class="viewer-stage"><img id="viewerImg" alt="" /><figcaption class="mono" id="viewerCap"></figcaption></figure>
+    <button class="icon-btn viewer-next" id="viewerNext" aria-label="الصورة التالية"><i class="fa-solid fa-arrow-left icon"></i></button>
+  </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="logo" aria-label="نصر الدين براس — العودة للأعلى"><span class="logo-mark">ن—ب</span></a>
+        <p class="foot-tag">مطوّر × مصمّم — أنظمة بسيطة بطموح كبير.</p>
+        <p class="mono foot-locale">الدار البيضاء، المغرب — <span id="footClock" dir="ltr">--:--:--</span> GMT</p>
+      </div>
+      <nav class="foot-nav" aria-label="التذييل">
+        <p class="mono foot-k">خريطة الموقع</p>
+        <a href="#about"><span class="mono f-num">٠١</span>من أنا</a>
+        <a href="#work"><span class="mono f-num">٠٢</span>أعمالي</a>
+        <a href="#certs"><span class="mono f-num">٠٣</span>الشهادات</a>
+        <a href="#contact"><span class="mono f-num">٠٤</span>اتصل بي</a>
+      </nav>
+      <div class="foot-contact">
+        <p class="mono foot-k">تواصل</p>
+        <a href="mailto:contact@nacer0s.com" dir="ltr">contact@nacer0s.com</a>
+        <a href="tel:+212776496110" dir="ltr">+212 776-496110</a>
+      </div>
+      <div class="foot-social">
+        <p class="mono foot-k" dir="ltr">@nacer0s</p>
+        <div class="socials">
+          <a href="https://instagram.com/nacer0s" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://x.com/nacer0s" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://wa.me/212776496110" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.threads.com/@nacer0s" target="_blank" rel="noopener" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
+          <a href="https://dev.to/nacer0s" target="_blank" rel="noopener" aria-label="DEV.TO"><i class="fa-brands fa-dev"></i></a>
+          <a href="https://www.linkedin.com/in/nacer0s" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://hashnode.com/@nacer0s" target="_blank" rel="noopener" aria-label="Hashnode"><i class="fa-brands fa-hashnode"></i></a>
+          <a href="https://www.hackerrank.com/nacer0s" target="_blank" rel="noopener" aria-label="HackerRank"><i class="fa-brands fa-hackerrank"></i></a>
+          <a href="https://qabilah.com/profile/nacer0s" target="_blank" rel="noopener" aria-label="Qabilah"><i class="fa-solid fa-users"></i></a>
+          <a href="https://www.mortakaz.com/@nacer0s" target="_blank" rel="noopener" aria-label="Mortakaz"><i class="fa-solid fa-rocket"></i></a>
+          <a href="https://github.com/nacer0s" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.snapchat.com/add/nacer0s" target="_blank" rel="noopener" aria-label="Snapchat"><i class="fa-brands fa-snapchat"></i></a>
+          <a href="https://discord.com/users/1285241643985010796" target="_blank" rel="noopener" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+          <a href="https://www.tiktok.com/@nacer0s" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://t.me/nacer0s" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://nacer0s.com" target="_blank" rel="noopener" aria-label="Website"><i class="fa-solid fa-globe"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="foot-big" dir="ltr">NACER®<span>—26</span></p>
+    <div class="foot-bottom mono">
+      <span>© <span id="year">2026</span> نصر الدين براس</span>
+      <span dir="ltr"><a href="../en/">EN</a> / <a href="../fr/">FR</a> / AR</span>
+      <button id="toTop" class="to-top">أعلى<i class="fa-solid fa-arrow-up icon"></i></button>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
